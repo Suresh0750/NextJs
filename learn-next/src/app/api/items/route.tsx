@@ -7,8 +7,6 @@ export async function GET(req:any){
     return new Response('Hello developer in route side')
 }
 export async function POST(req:any){
-    // const type = req.nextUrl.searchParams.get('')
-    // console.log(req)
     let k = await req.json()
     console.log(k)
     return Response.json([

@@ -2,6 +2,7 @@
 
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
+import { resolve } from "path"
 
 
 type customer = {
@@ -11,14 +12,19 @@ type customer = {
     }
 }
 
-export  const metadata=({params}:customer):Metadata=>{
+export  const metadata=async ({params}:customer):Promise<Metadata>=>{
+    const title =await new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(`Iphone ${params.customerID}`)
+        },100)
+    })
     return{
-        title  : `customer page ${params.customerID}`
+        title  : `customer page ${params?.customerID}`
     }
 }
 
 export default function customerId({params}:customer){
-
+     
     if(parseInt(params?.reviewID)>1000){
         notFound()
     }

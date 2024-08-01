@@ -60,3 +60,45 @@ how to install Next js ?
             > login
             > forget-password 
 
+// # Metadata from 'next'
+
+    for using asiging the meta data such as title and description
+
+
+/// # usePathname
+
+    it is to giving style for specific navbar links.
+    const pathname = usePathname()
+    pathname.startWith('/router)
+
+// # useRouter
+
+    /* using for navigation
+    import {useRouter} from 'next/navigation'
+    const router = useRouter()
+
+    router.push('/mention the router')
+    router.forward()
+    router.back()   // * back use to navigate the previous page is will take route from history
+    router.replace()
+
+// # template.tsx instead of layout.tsx
+
+    in the layout side the if we navigate also we can access the input value or show the input value another page not mounte the value
+
+    but we use template.tsx the value will change.
+
+// # Loading.tsx 
+
+    // * it's used to like suspence in react
+
+// # Error boundaries
+
+    error.tsx
+     using for show the the error
+
+    function error({error,reset}:{error:Error,reset:()=>void})
+
+
+// # paralel routes 
+    // @folder is naming conversion
